@@ -1,6 +1,7 @@
 # Bike Rush
 
-This is a simplified clone of the Bike Rush game on Unity.
+This is a simplified clone of the Bike Rush game on Unity.    
+The main goal was to create some kind of AI for bots, so don't judge strictly low-quality gameplay.
 
 ## Tools
 
