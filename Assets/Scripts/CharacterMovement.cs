@@ -10,12 +10,12 @@ public class CharacterMovement : MonoBehaviour
 
     private float startPosX;
 
-    public void Start()
+    void Start()
     {
         startPosX = transform.position.x;
     }
 
-    public void Update()
+    void Update()
     {
         transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
         float mouseX = Input.GetAxisRaw("Mouse X");
