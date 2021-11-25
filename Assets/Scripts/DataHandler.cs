@@ -6,11 +6,12 @@ public class DataHandler : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Obstacle"))
+        if (!other.gameObject.CompareTag("Untagged"))
         {
-            if (DataCollector.countRight > DataCollector.countLeft)
+            if (DataCollector.countRight >= DataCollector.countLeft)
             {
                 transform.parent.Translate(Vector3.right * 1f);
+                
             }
             else
             {

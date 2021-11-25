@@ -9,31 +9,79 @@ public class DataCollector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Obstacle"))
+        switch (other.gameObject.tag)
         {
-            if (other.transform.position.x > transform.position.x)
-            {
-                countLeft++;
-            }
-            else
-            {
-                countRight++;
-            }
+            case "Obstacle":
+                if (other.transform.position.x > transform.position.x)
+                {
+                    countLeft++;
+                }
+                else
+                {
+                    countRight++;
+                }
+                break;
+            case "Bicyclist":
+                if (other.transform.position.x > transform.position.x)
+                {
+                    countLeft += 2;
+                }
+                else
+                {
+                    countRight += 2;
+                }
+                break;
+            case "Character":
+                if (other.transform.position.x > transform.position.x)
+                {
+                    countLeft += 3;
+                }
+                else
+                {
+                    countRight += 3;
+                }
+                break;
+            default:
+                break;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Obstacle"))
+        switch (other.gameObject.tag)
         {
-            if (other.transform.position.x > transform.position.x)
-            {
-                countLeft--;
-            }
-            else
-            {
-                countRight--;
-            }
+            case "Obstacle":
+                if (other.transform.position.x > transform.position.x)
+                {
+                    countLeft--;
+                }
+                else
+                {
+                    countRight--;
+                }
+                break;
+            case "Bicyclist":
+                if (other.transform.position.x > transform.position.x)
+                {
+                    countLeft -= 2;
+                }
+                else
+                {
+                    countRight -= 2;
+                }
+                break;
+            case "Character":
+                if (other.transform.position.x > transform.position.x)
+                {
+                    countLeft -= 3;
+                }
+                else
+                {
+                    countRight -= 3;
+                }
+                break;
+            default:
+                break;
         }
     }
 }
