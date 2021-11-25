@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,13 +8,13 @@ public class DataHandler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
-            if (other.transform.position.x > transform.position.x)
+            if (DataCollector.countRight > DataCollector.countLeft)
             {
-                transform.Translate(Vector3.left * 1f);
+                transform.parent.Translate(Vector3.right * 1f);
             }
             else
             {
-                transform.Translate(Vector3.right * 1f);
+                transform.parent.Translate(Vector3.left * 1f);
             }
         }
     }
