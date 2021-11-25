@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Bicyclist
+  - Character
   layers:
   - Default
   - TransparentFX
