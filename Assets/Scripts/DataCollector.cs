@@ -14,12 +14,10 @@ public class DataCollector : MonoBehaviour
             if (other.transform.position.x > transform.position.x)
             {
                 countLeft++;
-                //transform.Translate(Vector3.left * 1f);
             }
             else
             {
                 countRight++;
-                //transform.Translate(Vector3.right * 1f);
             }
         }
     }
