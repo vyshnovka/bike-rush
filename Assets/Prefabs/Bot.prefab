@@ -170,6 +170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bicycle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c11843321e309f4e880c7daca2b951b, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c11843321e309f4e880c7daca2b951b, type: 3}
 --- !u!1 &1639710846534687954 stripped
@@ -195,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a07a3b15d443df14bb02aff8c998874a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a07a3b15d443df14bb02aff8c998874a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -235,6 +239,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a07a3b15d443df14bb02aff8c998874a, type: 3}
       propertyPath: m_Name
+      value: Bicyclist
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a07a3b15d443df14bb02aff8c998874a, type: 3}
+      propertyPath: m_TagString
       value: Bicyclist
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: a07a3b15d443df14bb02aff8c998874a, type: 3}
