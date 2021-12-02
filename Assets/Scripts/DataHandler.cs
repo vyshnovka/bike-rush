@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DataHandler : MonoBehaviour
 {
-    public float sideSpeed = 0.03f;
+    public float sideSpeed = 0.04f;
 
     private void OnTriggerStay(Collider other)
     {
