@@ -10,7 +10,7 @@ public class DataHandler : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Untagged"))
         {
-            if (DataCollector.countRight >= DataCollector.countLeft)
+            if (DataCollector.countRight > DataCollector.countLeft)
             {
                 transform.parent.position += Vector3.right * sideSpeed;
             }

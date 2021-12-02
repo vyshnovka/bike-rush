@@ -7,7 +7,7 @@ public class DataCollector : MonoBehaviour
     public static int countLeft = 0;
     public static int countRight = 0;
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         float thisPositionX = transform.position.x;
         float otherPositionX = other.transform.position.x;
@@ -49,7 +49,7 @@ public class DataCollector : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    public void OnTriggerExit(Collider other)
     {
         float thisPositionX = transform.position.x;
         float otherPositionX = other.transform.position.x;
