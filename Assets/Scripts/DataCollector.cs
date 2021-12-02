@@ -9,10 +9,13 @@ public class DataCollector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        float thisPositionX = transform.position.x;
+        float otherPositionX = other.transform.position.x;
+
         switch (other.gameObject.tag)
         {
             case "Bicyclist":
-                if (other.transform.position.x > transform.position.x)
+                if (otherPositionX > thisPositionX)
                 {
                     countLeft++;
                 }
@@ -22,7 +25,7 @@ public class DataCollector : MonoBehaviour
                 }
                 break;
             case "Obstacle":
-                if (other.transform.position.x > transform.position.x)
+                if (otherPositionX > thisPositionX)
                 {
                     countLeft += 2;
                 }
@@ -32,7 +35,7 @@ public class DataCollector : MonoBehaviour
                 }
                 break;
             case "Character":
-                if (other.transform.position.x > transform.position.x)
+                if (otherPositionX > thisPositionX)
                 {
                     countLeft += 3;
                 }
@@ -48,10 +51,13 @@ public class DataCollector : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        float thisPositionX = transform.position.x;
+        float otherPositionX = other.transform.position.x;
+
         switch (other.gameObject.tag)
         {
             case "Bicyclist":
-                if (other.transform.position.x > transform.position.x)
+                if (otherPositionX > thisPositionX)
                 {
                     countLeft--;
                 }
@@ -61,7 +67,7 @@ public class DataCollector : MonoBehaviour
                 }
                 break;
             case "Obstacle":
-                if (other.transform.position.x > transform.position.x)
+                if (otherPositionX > thisPositionX)
                 {
                     countLeft -= 2;
                 }
@@ -71,7 +77,7 @@ public class DataCollector : MonoBehaviour
                 }
                 break;
             case "Character":
-                if (other.transform.position.x > transform.position.x)
+                if (otherPositionX > thisPositionX)
                 {
                     countLeft -= 3;
                 }
