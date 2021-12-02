@@ -7,6 +7,8 @@ TagManager:
   - Obstacle
   - Bicyclist
   - Character
+  - CharacterBody
+  - BotBody
   layers:
   - Default
   - TransparentFX
