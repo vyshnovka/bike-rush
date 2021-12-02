@@ -11,7 +11,7 @@ public class DataCollector : MonoBehaviour
     {
         switch (other.gameObject.tag)
         {
-            case "Obstacle":
+            case "Bicyclist":
                 if (other.transform.position.x > transform.position.x)
                 {
                     countLeft++;
@@ -21,7 +21,7 @@ public class DataCollector : MonoBehaviour
                     countRight++;
                 }
                 break;
-            case "Bicyclist":
+            case "Obstacle":
                 if (other.transform.position.x > transform.position.x)
                 {
                     countLeft += 2;
@@ -50,7 +50,7 @@ public class DataCollector : MonoBehaviour
     {
         switch (other.gameObject.tag)
         {
-            case "Obstacle":
+            case "Bicyclist":
                 if (other.transform.position.x > transform.position.x)
                 {
                     countLeft--;
@@ -60,7 +60,7 @@ public class DataCollector : MonoBehaviour
                     countRight--;
                 }
                 break;
-            case "Bicyclist":
+            case "Obstacle":
                 if (other.transform.position.x > transform.position.x)
                 {
                     countLeft -= 2;
