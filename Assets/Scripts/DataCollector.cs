@@ -4,45 +4,21 @@ using UnityEngine;
 
 public class DataCollector : MonoBehaviour
 {
-    public static int countLeft = 0;
-    public static int countRight = 0;
+    public int countLeft = 0;
+    public int countRight = 0;
 
     public void OnTriggerEnter(Collider other)
     {
-        float thisPositionX = transform.position.x;
-        float otherPositionX = other.transform.position.x;
-
         switch (other.gameObject.tag)
         {
             case "Bicyclist":
-                if (otherPositionX > thisPositionX)
-                {
-                    countLeft++;
-                }
-                else
-                {
-                    countRight++;
-                }
+                TriggerDecision(other, 1);
                 break;
             case "Obstacle":
-                if (otherPositionX > thisPositionX)
-                {
-                    countLeft += 2;
-                }
-                else
-                {
-                    countRight += 2;
-                }
+                TriggerDecision(other, 2);
                 break;
             case "Character":
-                if (otherPositionX > thisPositionX)
-                {
-                    countLeft += 3;
-                }
-                else
-                {
-                    countRight += 3;
-                }
+                TriggerDecision(other, 3);
                 break;
             default:
                 break;
@@ -51,43 +27,31 @@ public class DataCollector : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        float thisPositionX = transform.position.x;
-        float otherPositionX = other.transform.position.x;
-
         switch (other.gameObject.tag)
         {
             case "Bicyclist":
-                if (otherPositionX > thisPositionX)
-                {
-                    countLeft--;
-                }
-                else
-                {
-                    countRight--;
-                }
+                TriggerDecision(other, -1);
                 break;
             case "Obstacle":
-                if (otherPositionX > thisPositionX)
-                {
-                    countLeft -= 2;
-                }
-                else
-                {
-                    countRight -= 2;
-                }
+                TriggerDecision(other, -2);
                 break;
             case "Character":
-                if (otherPositionX > thisPositionX)
-                {
-                    countLeft -= 3;
-                }
-                else
-                {
-                    countRight -= 3;
-                }
+                TriggerDecision(other, -3);
                 break;
             default:
                 break;
+        }
+    }
+
+    public void TriggerDecision(Collider other, int power)
+    {
+        if (other.transform.position.x > transform.position.x)
+        {
+            countLeft += power;
+        }
+        else
+        {
+            countRight += power;
         }
     }
 }
