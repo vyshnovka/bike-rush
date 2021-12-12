@@ -26,6 +26,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sideSpeed: 0.04
+  DataCollector: {fileID: 7877374634778359307}
 --- !u!1 &1873503501705054035
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96409dcd7a9c46f4d831ffc64b625f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countLeft: 0
+  countRight: 0
 --- !u!1 &3431013755274149817
 GameObject:
   m_ObjectHideFlags: 0

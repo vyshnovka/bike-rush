@@ -5,6 +5,7 @@ using UnityEngine;
 public class DataHandler : MonoBehaviour
 {
     public float sideSpeed = 0.04f;
+    public DataCollector DataCollector;
 
     private void OnTriggerStay(Collider other)
     {
