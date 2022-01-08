@@ -2,8 +2,8 @@
 
 This is a really simplified clone of the Bike Rush game on Unity.
 
-The game has no actual gameplay.    
-The main goal was to make some kind of AI for bots, so don't judge me strictly.
+The clone has no actual gameplay.    
+Don't judge me strictly, as this is just an example of AI bot behavior.
 
 ## Tools
 
